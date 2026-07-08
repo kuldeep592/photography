@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kuldeep Behera — Professional photographer specializing in landscape, wildlife, portrait, and urban photography. Capturing moments that transcend time.">
+  <title>Kuldeep Behera — Photography</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-bar"></div>
+    <div class="preloader-text">Loading</div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img src="" alt="Full size photo" id="lightboxImg">
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">Kuldeep<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active" data-nav>Home</a></li>
+      <li><a href="#portfolio" data-nav>Portfolio</a></li>
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#awards" data-nav>Awards</a></li>
+      <li><a href="#services" data-nav>Services</a></li>
+      <li><a href="#products" data-nav>Products</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#hero" data-mobile-nav>Home</a>
+    <a href="#portfolio" data-mobile-nav>Portfolio</a>
+    <a href="#about" data-mobile-nav>About</a>
+    <a href="#awards" data-mobile-nav>Awards</a>
+    <a href="#services" data-mobile-nav>Services</a>
+    <a href="#products" data-mobile-nav>Products</a>
+    <a href="#testimonials" data-mobile-nav>Testimonials</a>
+    <a href="#contact" data-mobile-nav>Contact</a>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero.jpg" alt="Dramatic mountain landscape at golden hour">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Visual Storyteller</p>
+      <h1 class="hero-title">Capturing <em>Light</em> &<br>Timeless Moments</h1>
+      <p class="hero-subtitle">
+        Through my lens, I explore the raw beauty of nature, the pulse of urban life,
+        and the quiet stories hidden in every frame.
+      </p>
+      <a href="#portfolio" class="hero-cta">
+        Explore My Work
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="section" id="portfolio">
+    <div class="section-header reveal">
+      <p class="section-tag">Selected Work</p>
+      <h2 class="section-title">Portfolio</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="portfolio-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="landscape">Landscape</button>
+      <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+      <button class="filter-btn" data-filter="urban">Urban</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+    </div>
+
+    <div class="portfolio-grid reveal-stagger">
+      <div class="portfolio-item reveal" data-category="landscape" style="--i:0">
+        <img src="images/hero.jpg" alt="Misty mountain range at golden hour" loading="lazy">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Golden Horizons</h3>
+          <p class="portfolio-item-category">Landscape</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" data-category="wildlife" style="--i:1">
+        <img src="images/wildlife.jpg" alt="Eagle in flight against stormy sky" loading="lazy">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Wings of Thunder</h3>
+          <p class="portfolio-item-category">Wildlife</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" data-category="nature" style="--i:2">
+        <img src="images/macro.jpg" alt="Dew drops on spider web in morning light" loading="lazy">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Morning Jewels</h3>
+          <p class="portfolio-item-category">Nature / Macro</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" data-category="urban" style="--i:3">
+        <img src="images/urban.jpg" alt="City skyline with neon reflections at night" loading="lazy">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Neon Dreamscape</h3>
+          <p class="portfolio-item-category">Urban</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" data-category="portrait" style="--i:4">
+        <img src="images/portrait.jpg" alt="Portrait with dramatic Rembrandt lighting" loading="lazy">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Shadow & Soul</h3>
+          <p class="portfolio-item-category">Portrait</p>
+        </div>
+      </div>
+
+      <div class="portfolio-item reveal" data-category="landscape" style="--i:5">
+        <img src="images/aurora.jpg" alt="Aurora borealis over frozen lake" loading="lazy">
+        <div class="portfolio-item-overlay">
+          <h3 class="portfolio-item-title">Northern Veil</h3>
+          <p class="portfolio-item-category">Landscape</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section" id="about">
+    <div class="section-header reveal">
+      <p class="section-tag">Who I Am</p>
+      <h2 class="section-title">About</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-image reveal-left">
+        <img src="images/portrait.jpg" alt="Kuldeep Behera — Photographer">
+        <div class="about-accent-box"></div>
+      </div>
+      <div class="about-text reveal-right">
+        <h3>Driven by curiosity,<br>guided by <em>light</em></h3>
+        <p>
+          I'm Kuldeep Behera, a professional photographer based in India with a deep
+          passion for chasing light across landscapes, cities, and wildlife. My journey
+          began with a borrowed camera and a fascination with the way light transforms
+          the ordinary into the extraordinary.
+        </p>
+        <p>
+          Every frame I capture tells a story — of fleeting moments, dramatic skies,
+          and the raw beauty that surrounds us. I specialize in landscape, wildlife,
+          portrait, and urban photography, bringing a cinematic eye to every project.
+        </p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AWARDS ===================== -->
+  <section class="section" id="awards">
+    <div class="section-header reveal">
+      <p class="section-tag">Recognition</p>
+      <h2 class="section-title">Awards & Honours</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="awards-grid reveal-stagger">
+      <div class="award-card reveal" style="--i:0">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+          </svg>
+        </div>
+        <div class="award-year">2025</div>
+        <h4 class="award-title">Wildlife Photographer of the Year</h4>
+        <p class="award-org">National Geographic</p>
+        <p class="award-desc">Honourable mention for the 'Wings of Thunder' eagle series captured in the Himalayas.</p>
+      </div>
+
+      <div class="award-card reveal" style="--i:1">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <div class="award-year">2024</div>
+        <h4 class="award-title">Best Landscape Photograph</h4>
+        <p class="award-org">International Photography Awards</p>
+        <p class="award-desc">Gold award for 'Northern Veil' — aurora borealis over frozen Scandinavian lakes.</p>
+      </div>
+
+      <div class="award-card reveal" style="--i:2">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 9 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18"/>
+            <path d="M6 9h12l-1.5 10a2 2 0 0 1-2 1.5h-5A2 2 0 0 1 7.5 19L6 9z"/>
+          </svg>
+        </div>
+        <div class="award-year">2024</div>
+        <h4 class="award-title">Sony World Photography Award</h4>
+        <p class="award-org">World Photography Organisation</p>
+        <p class="award-desc">Shortlisted in the Professional Landscape category for the 'Golden Horizons' series.</p>
+      </div>
+
+      <div class="award-card reveal" style="--i:3">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"/>
+            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+          </svg>
+        </div>
+        <div class="award-year">2023</div>
+        <h4 class="award-title">India Photography Award</h4>
+        <p class="award-org">India International Centre</p>
+        <p class="award-desc">Winner in the Urban & Architecture category for 'Neon Dreamscape' night cityscape series.</p>
+      </div>
+
+      <div class="award-card reveal" style="--i:4">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <div class="award-year">2022</div>
+        <h4 class="award-title">HIPA Grand Prize Finalist</h4>
+        <p class="award-org">Hamdan International Photography Award</p>
+        <p class="award-desc">Finalist for outstanding contribution to wildlife photography across the Indian subcontinent.</p>
+      </div>
+
+      <div class="award-card reveal" style="--i:5">
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 9 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18"/>
+            <path d="M6 9h12l-1.5 10a2 2 0 0 1-2 1.5h-5A2 2 0 0 1 7.5 19L6 9z"/>
+          </svg>
+        </div>
+        <div class="award-year">2021</div>
+        <h4 class="award-title">35Awards — Top 100</h4>
+        <p class="award-org">35Awards International</p>
+        <p class="award-desc">Selected among the top 100 nature photographers worldwide for the annual 35Awards compilation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section" id="services">
+    <div class="section-header reveal">
+      <p class="section-tag">What I Do</p>
+      <h2 class="section-title">Services</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="services-grid reveal-stagger">
+      <div class="service-card reveal" style="--i:0">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+            <circle cx="12" cy="13" r="3"/>
+          </svg>
+        </div>
+        <h4>Landscape Photography</h4>
+        <p>Immersive wide-angle landscapes capturing the grandeur of mountains, coastlines, and golden-hour vistas with cinematic depth.</p>
+      </div>
+
+      <div class="service-card reveal" style="--i:1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            <path d="M2 12h20"/>
+          </svg>
+        </div>
+        <h4>Wildlife & Nature</h4>
+        <p>Patient, immersive wildlife sessions capturing animals in their natural habitat — from birds in flight to intimate macro worlds.</p>
+      </div>
+
+      <div class="service-card reveal" style="--i:2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h4>Portrait Sessions</h4>
+        <p>Editorial and fine-art portrait sessions with dramatic lighting, bringing out character and emotion in every subject.</p>
+      </div>
+
+      <div class="service-card reveal" style="--i:3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <h4>Photo Editing & Retouching</h4>
+        <p>Professional color grading, compositing, and retouching to elevate raw captures into gallery-ready masterpieces.</p>
+      </div>
+
+      <div class="service-card reveal" style="--i:4">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <h4>Cinematic Video</h4>
+        <p>Short-form cinematic video work — travel reels, brand stories, and atmospheric b-roll with a photographer's eye for detail.</p>
+      </div>
+
+      <div class="service-card reveal" style="--i:5">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+            <line x1="4" y1="22" x2="4" y2="15"/>
+          </svg>
+        </div>
+        <h4>Workshops & Mentorship</h4>
+        <p>One-on-one mentoring and group workshops covering composition, lighting, post-processing, and developing your creative voice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTS ===================== -->
+  <section class="section" id="products">
+    <div class="section-header reveal">
+      <p class="section-tag">Gear & Recommendations</p>
+      <h2 class="section-title">Products</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <p class="products-intro reveal">
+      These are the tools I trust in the field every day, plus products I've personally researched and recommend.
+      <span class="affiliate-note">Links below are affiliate links — purchasing through them supports my work at no extra cost to you.</span>
+    </p>
+
+    <div class="products-tabs reveal">
+      <button class="product-tab active" data-product-tab="use">Products I Use</button>
+      <button class="product-tab" data-product-tab="recommend">Recommended After Research</button>
+    </div>
+
+    <!-- Products I Use -->
+    <div class="products-panel active" id="panel-use">
+      <div class="products-grid reveal-stagger">
+        <div class="product-card reveal" style="--i:0">
+          <div class="product-image-wrap">
+            <img src="images/product_camera.jpg" alt="Mirrorless Camera Body" loading="lazy">
+            <div class="product-badge">My Daily Driver</div>
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Sony A7R V</h4>
+            <p class="product-desc">61MP full-frame mirrorless. Unmatched resolution for landscape and wildlife with AI-based autofocus.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Camera Body</span>
+              <span class="product-rating">★★★★★</span>
+            </div>
+            <a href="#" class="product-buy-btn" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--i:1">
+          <div class="product-image-wrap">
+            <img src="images/product_lens.jpg" alt="Telephoto Lens" loading="lazy">
+            <div class="product-badge">Wildlife Essential</div>
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Sony 200-600mm f/5.6-6.3 G</h4>
+            <p class="product-desc">My go-to telephoto for wildlife. Incredible reach with outstanding optical stabilization.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Lens</span>
+              <span class="product-rating">★★★★★</span>
+            </div>
+            <a href="#" class="product-buy-btn" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--i:2">
+          <div class="product-image-wrap">
+            <img src="images/product_tripod.jpg" alt="Carbon Fiber Tripod" loading="lazy">
+            <div class="product-badge">Never Leave Without</div>
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Peak Design Travel Tripod</h4>
+            <p class="product-desc">Ultra-compact carbon fiber tripod. Packs down to the size of a water bottle — perfect for travel.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Tripod</span>
+              <span class="product-rating">★★★★☆</span>
+            </div>
+            <a href="#" class="product-buy-btn" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommended Products -->
+    <div class="products-panel" id="panel-recommend">
+      <div class="products-grid reveal-stagger">
+        <div class="product-card reveal" style="--i:0">
+          <div class="product-image-wrap">
+            <img src="images/product_drone.jpg" alt="Photography Drone" loading="lazy">
+            <div class="product-badge recommended">Top Pick</div>
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">DJI Air 3</h4>
+            <p class="product-desc">Best value drone for aerial photography. Dual cameras, 48MP, stunning 4K video with excellent obstacle avoidance.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Drone</span>
+              <span class="product-rating">★★★★★</span>
+            </div>
+            <a href="#" class="product-buy-btn recommended" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--i:1">
+          <div class="product-image-wrap">
+            <img src="images/product_filter.jpg" alt="ND Filter Kit" loading="lazy">
+            <div class="product-badge recommended">Best Value</div>
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">NiSi V7 Filter System</h4>
+            <p class="product-desc">Professional 100mm filter system with true color accuracy. ND, GND, and polarizer kit for landscape shooters.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Filters</span>
+              <span class="product-rating">★★★★★</span>
+            </div>
+            <a href="#" class="product-buy-btn recommended" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card reveal" style="--i:2">
+          <div class="product-image-wrap">
+            <img src="images/product_backpack.jpg" alt="Camera Backpack" loading="lazy">
+            <div class="product-badge recommended">Great for Travel</div>
+          </div>
+          <div class="product-info">
+            <h4 class="product-name">Shimoda Explore V2</h4>
+            <p class="product-desc">Adventure-ready camera backpack with modular core units. Weather-sealed, ergonomic, fits a full kit + laptop.</p>
+            <div class="product-meta">
+              <span class="product-category-tag">Backpack</span>
+              <span class="product-rating">★★★★☆</span>
+            </div>
+            <a href="#" class="product-buy-btn recommended" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section" id="testimonials">
+    <div class="section-header reveal">
+      <p class="section-tag">Kind Words</p>
+      <h2 class="section-title">Testimonials</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            Kuldeep has an extraordinary eye for light and composition. His landscape work
+            transported us to places we'd only dreamed of visiting. The prints hang proudly
+            in our living room.
+          </p>
+          <p class="testimonial-author">Arjun Mehta</p>
+          <p class="testimonial-role">Art Collector</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            Working with Kuldeep on our brand campaign was seamless. He understood our vision
+            instantly and delivered images that went far beyond our expectations. Truly a master
+            of his craft.
+          </p>
+          <p class="testimonial-author">Priya Sharma</p>
+          <p class="testimonial-role">Creative Director, Lumière Agency</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            The wildlife photography workshop with Kuldeep completely changed how I see
+            the natural world. His patience and teaching style made complex techniques
+            feel accessible and inspiring.
+          </p>
+          <p class="testimonial-author">Rahul Kapoor</p>
+          <p class="testimonial-role">Workshop Participant</p>
+        </div>
+      </div>
+      <div class="testimonial-controls" id="testimonialControls">
+        <button class="testimonial-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="testimonial-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="testimonial-dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section" id="contact">
+    <div class="section-header reveal">
+      <p class="section-tag">Get In Touch</p>
+      <h2 class="section-title">Contact</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal-left">
+        <h3>Let's create something<br><em>beautiful</em> together</h3>
+        <p>
+          Whether you're looking for a commissioned shoot, want to purchase prints,
+          or are interested in a workshop — I'd love to hear from you. Let's start a conversation.
+        </p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              kuldeep@photography.com
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Location</strong>
+              India
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Phone</strong>
+              Available on request
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form reveal-right" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="nameInput" placeholder=" " required>
+          <label for="nameInput">Your Name</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="emailInput" placeholder=" " required>
+          <label for="emailInput">Email Address</label>
+        </div>
+        <div class="form-group">
+          <input type="text" id="subjectInput" placeholder=" ">
+          <label for="subjectInput">Subject</label>
+        </div>
+        <div class="form-group">
+          <textarea id="messageInput" placeholder=" " rows="4" required></textarea>
+          <label for="messageInput">Your Message</label>
+        </div>
+        <button type="submit" class="submit-btn">
+          Send Message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#" class="footer-logo">Kuldeep<span>.</span></a>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter / X">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Kuldeep Behera. All rights reserved. Crafted with passion.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
