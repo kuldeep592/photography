@@ -66,12 +66,12 @@ Photography-Portfolio/
 ├── script.js
 │
 ├── images/
-│   ├── hero.jpg
+│   ├── hero.JPG
 │   ├── wildlife.jpg
-│   ├── portrait.jpg
+│   ├── portrait.JPG
 │   ├── urban.jpg
 │   ├── macro.jpg
-│   ├── aurora.jpg
+│   ├── aurora.JPG
 │   ├── product_camera.jpg
 │   ├── product_lens.jpg
 │   └── ...
@@ -242,7 +242,7 @@ index.html
 Example
 
 ```html
-<img src="images/hero.jpg">
+<img src="images/hero.JPG">
 ```
 
 ---
